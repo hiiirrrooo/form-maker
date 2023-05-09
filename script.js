@@ -20,17 +20,16 @@ const appendText = (label = "No label", placeholder = "No placeholder", counter)
     let dl = document.createElement('div')
     dl.setAttribute('class', 'container-fluid mt-2')
     dl.setAttribute('id', counter)
-    let il = document.createElement('p')
-    il.setAttribute('class', 'text-right text-secondary')
+    let il = document.createElement('div')
+    il.setAttribute('class', 'text-right text-secondary d-flex flex-row justify-content-end')
     il.textContent = counter
 
     let fl = document.createElement('form')
     fl.setAttribute('id', counter)
     fl.setAttribute('name', 'text')
 
-    let al = document.createElement('label')
-    al.setAttribute('for', nwlabel)
-    al.setAttribute('class','h2 ms-2')
+    let al = document.createElement('div')
+    al.setAttribute('class','h4 ms-2 w-25')
     al.setAttribute('name', nwlabel)
     al.textContent = label
 
@@ -41,8 +40,8 @@ const appendText = (label = "No label", placeholder = "No placeholder", counter)
     el.setAttribute('name', nwlabel)
 
     document.querySelector("#form").append(dl)
-    document.getElementById(counter).append(il)
     document.getElementById(counter).append(fl)
+    document.getElementById(counter).append(il)
     document.getElementById(counter).append(al)
     document.getElementById(counter).append(el)
 }
@@ -52,6 +51,9 @@ const appendRadio = (label = "No label", placeholder = "No placeholder", counter
     let dl = document.createElement('div')
     dl.setAttribute('class', 'container-fluid mt-2')
     dl.setAttribute('id', counter)
+    let il = document.createElement('div')
+    il.setAttribute('class', 'text-right text-secondary d-flex flex-row justify-content-end')
+    il.textContent = counter
 
     let fl = document.createElement('form')
     fl.setAttribute('id', counter)
@@ -71,6 +73,7 @@ const appendRadio = (label = "No label", placeholder = "No placeholder", counter
 
     document.querySelector("#form").append(dl)
     document.getElementById(counter).append(fl)
+    document.getElementById(counter).append(il)
     document.getElementById(counter).append(el)
     document.getElementById(counter).append(al)
 }
@@ -80,6 +83,9 @@ const appendButton = (label = "No label", placeholder = "No placeholder", counte
     let dl = document.createElement('div')
     dl.setAttribute('class', 'container-fluid mt-2')
     dl.setAttribute('id', counter)
+    let il = document.createElement('div')
+    il.setAttribute('class', 'text-right text-secondary d-flex flex-row justify-content-end')
+    il.textContent = counter
 
     let fl = document.createElement('form')
     fl.setAttribute('id', counter)
@@ -98,6 +104,7 @@ const appendButton = (label = "No label", placeholder = "No placeholder", counte
 
     document.querySelector("#form").append(dl)
     document.getElementById(counter).append(fl)
+    document.getElementById(counter).append(il)
     document.getElementById(counter).append(al)
     document.getElementById(counter).append(el)
 }
